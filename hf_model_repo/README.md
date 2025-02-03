@@ -5,7 +5,7 @@ tags:
 - ultralytics
 - cavitation
 - bubbles
-library_name: pytorch
+library_name: ultralytics
 license: mit
 datasets:
   - custom
@@ -16,6 +16,7 @@ model-index:
           type: image-segmentation
         dataset:
           name: Custom Dataset
+          type: image
         metrics:
           - type: IoU
             value: 0.8
