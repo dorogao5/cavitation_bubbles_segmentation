@@ -169,3 +169,18 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# roboflow datasets
+cavitation_bubbles_segmentation*/
+
+# models weights
+yolo*.pt
+
+# wandb logs
+wandb
+
+# TEMP notebooks
+notebooks
+
+# upload to huggingface script
+upload_to_huggingface.py
