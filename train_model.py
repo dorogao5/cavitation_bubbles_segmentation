@@ -20,7 +20,7 @@ rf = Roboflow(api_key=project_settings.roboflow_api_key)
 
 project = rf.workspace().project("cavitation_bubbles_segmentation")
 
-dataset = project.version(7).download("yolov11")
+dataset = project.version(9).download("yolov11")
 
 model = YOLO("yolo11m-seg.pt", task="segment")
 
@@ -34,11 +34,11 @@ model.train(
     plots=True,
     save=True,
     val=True,
-    device=0,
+    device=1,
     project="cavitation_bubbles_segmentation",
-    name="yolov11m_v7",
+    name="yolov11m_v9",
 )
 
-version = project.version(7)
+version = project.version(9)
 
-version.deploy("yolov11", "cavitation_bubbles_segmentation/yolov11m_v7")
+version.deploy("yolov11", "cavitation_bubbles_segmentation/yolov11m_v9")
