@@ -1,0 +1,6 @@
+venv/
+cavitation_bubbles_segmentation*/
+notebooks/
+outputs/
+uploads/
+*.avi

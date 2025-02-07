@@ -16,14 +16,14 @@ rf = Roboflow(api_key=project_settings.roboflow_api_key)
 
 project = rf.workspace().project("cavitation_bubbles_segmentation")
 
-dataset = project.version(3).download("yolov11")
+dataset = project.version(9).download("yolov11")
 
-model = YOLO("yolo11x-seg", task="segment")
+model = YOLO("yolo11m-seg", task="segment")
 
 model.tune(data=os.path.join(dataset.location, "data.yaml"),
            use_ray=True,
            project="cavitation_bubbles_segmentation",
-           name="yolov11x",
+           name="yolov11m-v9-tune",
         #    exist_ok=True,
            seed=42,
            plots=True,

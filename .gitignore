@@ -184,3 +184,7 @@ notebooks
 
 # upload to huggingface script
 upload_to_huggingface.py
+
+# sub folders
+/uploads
+/outputs
